@@ -5,9 +5,6 @@
 - сохраняет `ticker`, `price`, `timestamp` (UNIX, seconds) в PostgreSQL;
 - предоставляет внешнее API на FastAPI для чтения сохраненных данных.
 
-## Что реализовано по ТЗ
-
-### Обязательные требования
 - Клиент Deribit.
 - Периодический сбор цен через `Celery Beat` (каждую минуту).
 - Хранение данных в `PostgreSQL`.
@@ -16,8 +13,6 @@
   - `GET /prices/all?ticker=...` - все сохраненные данные по валюте;
   - `GET /prices/latest?ticker=...` - последняя цена;
   - `GET /prices/by-date?ticker=...&start_timestamp=...&end_timestamp=...` - цены за период.
-
-### Необязательные требования, также выполнил
 - Unit tests для основных методов.
 - Docker-разворачивание в двух контейнерах, а Celery вынесен в profile.
 - `aiohttp` применен в клиенте Deribit.
